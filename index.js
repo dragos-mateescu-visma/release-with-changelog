@@ -39,7 +39,7 @@ async function run() {
 
 		core.info('Retrived tags:  ' + tags);
 
-		let fromTag=core.getInput('fromTag') || tags[1];
+		let fromTag = core.getInput('fromTag') || tags[1];
 
 		// Get range to generate diff
 		let range = fromTag + '..' + pushedTag;
