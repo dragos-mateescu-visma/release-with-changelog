@@ -37,8 +37,10 @@ async function run() {
 			core.info('Using pushed tag as reference: ' + pushedTag);
 		}
 
+		let fromTag=core.getInput('fromTag') || tags[1];
+
 		// Get range to generate diff
-		let range = tags[1] + '..' + pushedTag;
+		let range = fromTag + '..' + pushedTag;
 		if (tags.length < 2) {
 			const {stdout: rootCommit} = await execFile('git', ['rev-list', '--max-parents=0', 'HEAD']);
 			range = rootCommit.trim('') + '..' + pushedTag;

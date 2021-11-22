@@ -7,6 +7,9 @@ inputs:
   tag:
     description: Specific tag to generate changelog against
     required: false
+  fromTag:
+    description: Specific tag to generate changelog from
+    required: false
   token:
     description: Personal access token (PAT) used to create releases
     required: true
