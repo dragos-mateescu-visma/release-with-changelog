@@ -37,7 +37,7 @@ async function run() {
 			core.info('Using pushed tag as reference: ' + pushedTag);
 		}
 
-		core.info('Retrived tags: ' + tags);
+		core.info('Retrived tags:  ' + tags);
 
 		let fromTag=core.getInput('fromTag') || tags[1];
 
